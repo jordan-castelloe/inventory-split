@@ -84,7 +84,7 @@ var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("hvl");
    // if Asheville has more of a given item than Hendersonville:
    if (avlOnHandValue > hvlOnHandValue){
      var total =  avlOnHandValue + hvlOnHandValue;
-     var send = avlOnHandValue - (total * toAvl) // THIS PERCENTAGE CAN CHANGE! (for example, if you want avl to get 40% of the inventory, change to 0.4
+     var send = avlOnHandValue - (total * toAvl) 
       if (send < 0){
        hvlToAvl.appendListItem((send * -1) + "   " + DescriptionValue +"    " + CodeValue +"    " + hvlBinValue);
      } else {
@@ -93,7 +93,7 @@ var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("hvl");
   // if Hendersonville has more of a given item than Asheville
    } else if (hvlOnHandValue > avlOnHandValue) {
        var total = avlOnHandValue + hvlOnHandValue
-       var send = hvlOnHandValue - (total * toHvl) // THIS PERCENTAGE CAN ALSO CHANGE!
+       var send = hvlOnHandValue - (total * toHvl) 
        if (send < 0){
        avlToHvl.appendListItem((send * -1) + "   " + DescriptionValue +"    " + CodeValue +"    " + avlBinValue);
      } else {
